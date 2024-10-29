@@ -7,7 +7,7 @@ import NotFound from './components/NotFound';
 import './App.css';
 
 const App = () => {
-  const userHasAccess = false; // для примера, устанавливаем флаг доступа
+  const userHasAccess = false;
 
   return (
     <Router>
