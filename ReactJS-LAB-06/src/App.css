@@ -1,0 +1,90 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #a0a0a0;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: repeat(20, 20px);
+  grid-template-columns: repeat(20, 20px);
+  background-color: #333;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  transition: background-color 0.1s ease;
+}
+
+.snake {
+  background-color: #4caf50;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.food {
+  background-color: #ff5722;
+}
+
+.paused {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #ff5722;
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2e2e2e;
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: center;
+}
+
+.modal h2 {
+  margin-bottom: 10px;
+}
+
+.modal button {
+  padding: 8px 16px;
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modal button:hover {
+  background-color: #388e3c;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+}
